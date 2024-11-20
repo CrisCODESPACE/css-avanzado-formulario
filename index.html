@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Formulario Inscripción</title>
+    <link rel="stylesheet" href="styles/main.css" />
+  </head>
+  <body>
+    <header></header>
+    <main>
+      <h1>Inscripción al evento</h1>
+      <!-- datos personales -->
+      <form>
+        <h3>Datos personales</h3>
+        <label for="nombre">Nombre:</label>
+        <input
+          type="text"
+          id="nombre"
+          name="nombre"
+          placeholder="Introduce tu nombre"
+          required
+          size="30"
+          maxlength="50"
+        />
+        <br />
+        <label for="apellidos">Apellidos:</label>
+        <input
+          type="text"
+          id="apellidos"
+          name="apellidos"
+          placeholder="Introduce tus apellidos"
+          required
+          size="30"
+          maxlength="50"
+        />
+        <br />
+        <label for="email">Email:</label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Introduce tu email"
+          required
+          size="30"
+          maxlength="50"
+        />
+        <br />
+        <label for="fecha-cumpleanos">Fecha Cumpleaños:</label>
+        <input
+          type="date"
+          id="fecha-cumpleanos"
+          name="fecha-cumpleanos"
+          placeholder="Introduce tu fecha-cumpleanos"
+          required
+          size="30"
+          maxlength="50"
+        />
+        <br />
+        <h3>Preferencias deportivas</h3>
+        <fieldset class="deportes">
+          <legend>Deportes favoritos</legend>
+          <label for="fav-natacion">
+            <input
+              type="checkbox"
+              id="fav-natacion"
+              name="fav-natacion"
+              value="natacion"
+            />
+            Natación
+          </label>
+          <label for="fav-futbol">
+            <input
+              type="checkbox"
+              id="fav-futbol"
+              name="fav-futbol"
+              value="futbol"
+            />
+            Fútbol
+          </label>
+          <label for="fav-tenis">
+            <input
+              type="checkbox"
+              id="fav-tenis"
+              name="fav-tenis"
+              value="tenis"
+            />
+            Tenis
+          </label>
+          <label for="fav-atletismo">
+            <input
+              type="checkbox"
+              id="fav-atletismo"
+              name="fav-atletismo"
+              value="atletismo"
+            />
+            Atletismo
+          </label>
+        </fieldset>
+        <br />
+        <table>
+          <thead>
+            <tr>
+              <th>Deporte</th>
+              <th>Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Natación</td>
+              <td>09:00</td>
+            </tr>
+            <tr>
+              <td>Fútbol</td>
+              <td>12:00</td>
+            </tr>
+            <tr>
+              <td>Tenis</td>
+              <td>14:00</td>
+            </tr>
+            <tr>
+              <td>Atletismo</td>
+              <td>16:00</td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Info adicional</h3>
+        <label for="residencia">Municipio:</label>
+        <select name="residencia" id="residencia">
+          <option value="la-laguna">La Laguna</option>
+          <option value="santa-cruz">Santa Cruz</option>
+          <option value="el-puerto">El Puerto</option>
+          <option value="la-matanza">La Matanza</option>
+        </select>
+        <br />
+        <!-- comentarios -->
+        <label for="comentario">Comentario:</label>
+        <br />
+        <textarea
+          name="comentario"
+          id="comentario"
+          rows="3"
+          cols="50"
+          placeholder="Introduce tu comentario aquí"
+        ></textarea>
+        <br />
+        <!-- sugerencias -->
+        <label for="sugerencia">Sugerencia:</label>
+        <br />
+        <textarea
+          name="sugerencia"
+          id="sugerencia"
+          rows="3"
+          cols="50"
+          placeholder="Introduce tu sugerencia aquí"
+        ></textarea>
+        <br />
+        <!-- botones -->
+        <div class="buttons">
+          <button type="submit">Enviar</button>
+          <!-- <button type="reset">Borrar</button> -->
+
+          <input
+            type="checkbox"
+            id="modal"
+            name="modal"
+            style="display: none"
+          />
+          <label for="modal" class="btn-borrar">Borrar</label>
+
+          <div class="modal">
+            <div class="modal-content">
+              <p>¿Estás seguro de que quieres borrar?</p>
+              <label for="modal" class="close">Si</label>
+              <label for="modal" class="close">No</label>
+            </div>
+          </div>
+        </div>
+      </form>
+    </main>
+    <footer></footer>
+  </body>
+</html>
